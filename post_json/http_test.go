@@ -24,8 +24,5 @@ func TestHttp(t *testing.T) {
     ]
 }  `
 	fmt.Println(body)
-	a := 89
-	fmt.Println("value of a is", a)
-	fmt.Printf("type of a is %T", a)
 	jps.MyPost(url, body)
 }

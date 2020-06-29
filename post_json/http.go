@@ -49,7 +49,8 @@ func (this *JsonPostSample) SamplePost() {
 
 func (this *JsonPostSample) MyPost(url, data string) {
     jsonStr := []byte(data)
-    request, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
+    request, err := http.NewRequest("POST", url, bytes.NewReader(jsonStr))
+    //request, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
     if err != nil {
         fmt.Println(err.Error())
         return
